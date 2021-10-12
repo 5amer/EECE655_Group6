@@ -1,4 +1,4 @@
-# EECE655 Group6 - TCP RST ATTACK
+# EECE655 GROUP 6 - TCP RST ATTACK
 
 - The tcp reset attack aims to reset a connection between two hosts by sending to on of the hosts a packet with the RST flag on.
 - The host is forced to abort connection because of the nature of how the RST flag works
