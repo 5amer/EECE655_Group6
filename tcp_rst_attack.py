@@ -1,3 +1,5 @@
+__author__ = 'Samer Hanna'
+
 from scapy.all import *
 
 conf.use_pcap = True
