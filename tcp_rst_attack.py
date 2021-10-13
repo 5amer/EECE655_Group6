@@ -1,6 +1,7 @@
-__author__ = 'Samer Hanna'
+__authors__ = 'Samer Hanna and Ademola Adesokan'
 
-from scapy.all import *
+#Import Scapy library for interactive packet manipulation library
+from scapy.all import * 
 
 #used to fix some configuration
 conf.use_pcap = True
