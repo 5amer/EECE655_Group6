@@ -10,12 +10,22 @@ def findSeqNum(pkt):
 	global seq_num
 	seq_num = pkt[TCP].ack
 
+rescan = True
+while rescan:
+	#Sniffing network: attacker is sniffing 25 packets
+	capture = sniff(count=25)
 
-#Sniffing network: attacker is sniffing 25 packets
-capture = sniff(count=25)
+	#output some information about the sniffed packets
+	capture.summary()
 
-#output some information about the sniffed packets
-capture.summary()
+	#Asking user if he wants to resniff network
+	while True:
+		resniff = input("Continue(c) or Rescan(r): ")
+		if resniff=="c":
+			rescan = False
+			break
+		elif resniff=="r":
+			break
 
 #Setting the values that will be used in the spoofed packet
 ip_src = input("[*] Enter source ip: ")
